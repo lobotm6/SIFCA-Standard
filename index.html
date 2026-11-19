@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173b57">
+<title>5S Management System</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brandmark">5S</div><div><strong>5S Management System</strong><small>Workplace standards · Audits · Improvement</small></div></div>
+  <div class="top-actions"><span id="connection" class="status">Checking connection…</span><button id="installBtn" class="ghost hidden">Install app</button></div>
+</header>
+<div class="shell">
+<aside class="sidebar">
+  <nav id="nav">
+    <button class="nav active" data-page="dashboard">▦ <span>Dashboard</span></button>
+    <button class="nav" data-page="zones">⌖ <span>Sites &amp; zones</span></button>
+    <button class="nav" data-page="audits">☑ <span>Audits</span></button>
+    <button class="nav" data-page="actions">↗ <span>Improvement actions</span></button>
+    <button class="nav" data-page="standards">▧ <span>Ideal conditions</span></button>
+    <button class="nav" data-page="performance">▥ <span>Performance</span></button>
+    <button class="nav" data-page="boards">▤ <span>Board reports</span></button>
+    <button class="nav" data-page="admin">⚙ <span>Settings &amp; data</span></button>
+  </nav>
+  <div class="sidebar-note"><b>Offline-ready</b><p>Records are saved on this device. Export and transfer backups regularly.</p></div>
+</aside>
+<main id="main" class="content" aria-live="polite"></main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<dialog id="modal"><form method="dialog" id="modalForm"><div class="modal-head"><h2 id="modalTitle">Details</h2><button class="iconbtn" value="cancel" aria-label="Close">×</button></div><div id="modalBody"></div><div class="modal-actions"><button class="secondary" value="cancel">Cancel</button><button id="modalSave" class="primary" value="default">Save</button></div></form></dialog>
+<script src="app.js"></script>
+</body>
+</html>
